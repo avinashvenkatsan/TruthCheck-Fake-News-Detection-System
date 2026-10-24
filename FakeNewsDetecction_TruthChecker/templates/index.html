@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>TruthCheck | News Text Analyzer</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+<header><div class="logo">T</div><div><small>OOSE MINI-PROJECT</small><h1>TruthCheck</h1></div><span class="pill">ML prototype</span></header>
+<main>
+  <section class="intro"><small>NEWS TEXT ANALYZER</small><h2>Pause. Check. Then share.</h2><p>Analyze news text with a machine-learning prototype.</p></section>
+  <section class="grid">
+    <article class="card">
+      <div class="heading"><div><h3>Analyze an article</h3><p>Paste at least 20 characters of text.</p></div><b>01</b></div>
+      <form id="newsForm">
+        <label for="newsText">News headline or article</label>
+        <textarea id="newsText" maxlength="10000" placeholder="Paste news text here..." required></textarea>
+        <div class="meta"><span id="textCount">0 characters</span><span>Maximum 10,000</span></div>
+        <div class="buttons"><button id="analyzeButton" type="submit">Analyze text →</button><button id="clearButton" class="secondary" type="button">Clear</button></div>
+      </form>
+      <div class="samples"><span>Try a sample:</span><button type="button" data-sample="real">News report</button><button type="button" data-sample="fake">Suspicious claim</button></div>
+    </article>
+    <article class="card">
+      <div class="heading"><div><h3>Analysis result</h3><p>Model output for submitted text</p></div><b>02</b></div>
+      <div id="emptyState" class="empty"><div class="search-icon">⌕</div><h4>Waiting for text</h4><p>Your prediction appears here after analysis.</p></div>
+      <div id="resultContent" hidden>
+        <span id="resultBadge" class="badge">Prediction</span><h2 id="resultTitle">Result</h2><p id="resultSummary"></p>
+        <div class="confidence"><span>Model confidence</span><strong id="confidenceValue">—</strong></div>
+        <div class="track"><div id="confidenceBar"></div></div>
+        <div class="stats"><div><small>Words</small><strong id="wordCount">0</strong></div><div><small>Characters</small><strong id="characterCount">0</strong></div></div>
+        <p id="disclaimer" class="disclaimer"></p>
+      </div>
+      <p id="errorMessage" class="error" role="alert" hidden></p>
+    </article>
+  </section>
+  <section class="card history"><div class="heading"><div><h3>Recent analyses</h3><p>History is kept only until this page is refreshed.</p></div><button id="clearHistoryButton" class="link" type="button">Clear history</button></div><div id="historyList"><p class="muted">No analyses yet.</p></div></section>
+  <aside><strong>Important limitation</strong><p>This educational prototype uses a tiny illustrative dataset. Predictions are not fact-checks and may be wrong. Replace the sample data with a properly sourced, larger dataset and evaluate it before making claims about accuracy.</p></aside>
+</main>
+<footer>TruthCheck · Object-Oriented Software Engineering mini-project</footer>
+<script src="{{ url_for('static', filename='script.js') }}"></script>
+</body></html>
