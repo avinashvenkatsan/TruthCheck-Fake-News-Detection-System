@@ -28,7 +28,7 @@ This is a local Flask website with HTML/CSS/JavaScript and a scikit-learn text c
    ```powershell
    python app.py
    ```
-7. Open `http://127.0.0.1:5000` in your browser. Keep the terminal open while using it. Press Ctrl+C to stop.
+7. Open `https://truthcheck-python-live.onrender.com` in your browser. Keep the terminal open while using it. Press Ctrl+C to stop.
 
 ## Files
 - `app.py`: Flask server and model training
