@@ -102,8 +102,7 @@ python app.py
 
 Open your browser and visit:
 
-http://127.0.0.1:5000
-
+https://truthcheck-python-live.onrender.com
 Keep the terminal running while you use the application. Press `Ctrl+C` in the terminal to stop the server.
 
 ## Deploying on Render
