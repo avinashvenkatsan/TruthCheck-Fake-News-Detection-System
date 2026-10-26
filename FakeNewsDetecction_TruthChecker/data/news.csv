@@ -23,3 +23,4 @@ text,label
 "Forward this message because a secret government notice supposedly promises free cash to all citizens today.",likely_fake
 "A viral headline claims one simple trick guarantees a job with no interview, qualifications, or application.",likely_fake
 "An unverified message says a celebrity confessed to an extraordinary crime but includes no verifiable source.",likely_fake
+"a news without any reference",likely_fake
